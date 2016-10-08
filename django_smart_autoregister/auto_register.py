@@ -9,7 +9,7 @@ def is_suitable_for_raw_id_fields(field):
     return is_relationship_field(field)
 
 def is_suitable_for_list_display(field):
-    return is_string(field) or is_boolean(field) or is_number(field) or is_datetime(field)
+    return is_string(field) or is_boolean(field) or is_number(field) or is_datetime(field) or is_relationship_field(field)
 
 def is_suitable_for_list_display_links(field):
     return is_suitable_for_list_display(field)

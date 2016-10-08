@@ -240,7 +240,7 @@ def is_string(field):
 
 def is_number(field):
     return isinstance(field, (IntegerField, SmallIntegerField, PositiveIntegerField,
-        PositiveSmallIntegerField, BigIntegerField, CommaSeparatedIntegerField, DecimalField, FloatField))
+        PositiveSmallIntegerField, BigIntegerField, CommaSeparatedIntegerField, DecimalField, FloatField, AutoField))
 
 def is_datetime(field):
     return isinstance(field, (DateTimeField, DateField, TimeField))
