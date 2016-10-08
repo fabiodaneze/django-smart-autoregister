@@ -22,7 +22,7 @@ class SomeModel(models.Model):
     text = models.TextField(max_length=255)
     with_choices = models.CharField(max_length=5, choices=SAMPLE_CHOICES, default='1')
     email = models.EmailField()
-    ip = models.IPAddressField()
+    ip = models.GenericIPAddressField()
     slug = models.SlugField()
     url = models.URLField()
 
@@ -39,7 +39,7 @@ class SomeModel(models.Model):
     boolean = models.BooleanField(default=False)
     null_boolean = models.NullBooleanField(default=False)
 
-    datetime = models.DateTimeField(auto_now=True, auto_now_add=True)
+    datetime = models.DateTimeField(auto_now=True)
     date = models.DateField()
     time = models.TimeField()
 
